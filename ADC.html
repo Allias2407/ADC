@@ -1,0 +1,945 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="styleadc.css" />
+    <meta
+      name="description"
+      content="Accessibility ranking page for people with disabilities in Vietnam – WCAG 2.2 AA compliant"
+    />
+    <title>Accessibility Rankings – WCAG 2.2 AA</title>
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
+    <!-- NAV -->
+    <nav role="navigation" aria-label="Main navigation">
+      <div class="nav__bar container">
+        <button
+          class="nav__toggle"
+          aria-label="Toggle menu"
+          aria-expanded="false"
+        >
+          ☰
+        </button>
+
+        <ul class="nav__list" id="nav-list">
+          <li class="nav__item"><a href="#main-content">Home</a></li>
+          <li class="nav__item"><a href="#about">About</a></li>
+        </ul>
+
+        <div
+          class="nav__controls"
+          role="group"
+          aria-label="Accessibility controls"
+        >
+          <button
+            type="button"
+            class="btn btn--ghost"
+            id="btn-contrast"
+            aria-pressed="false"
+            aria-label="Toggle high contrast mode"
+          >
+            High Contrast
+          </button>
+          <button
+            type="button"
+            class="btn btn--ghost"
+            id="btn-read"
+            aria-label="Read page content aloud"
+          >
+            Read Page
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <!-- HERO HEADER WITH SEARCH -->
+    <header role="banner" id="main-content">
+      <div class="container hero">
+        <h1 class="hero__title">
+          Accessibility Rankings – People with Disabilities
+        </h1>
+        <p class="hero__subtitle">
+          Enter a term and choose filters to check accessibility scores across
+          Vietnam.
+        </p>
+
+        <form
+          id="hero-search"
+          class="hero__form"
+          role="search"
+          aria-label="Search for locations"
+        >
+          <label class="sr-only" for="search-input">Search</label>
+          <div class="input-group">
+            <input
+              class="input"
+              type="text"
+              id="search-input"
+              placeholder="Search (e.g., restaurants near Hanoi)"
+              aria-label="Search for disability-friendly infrastructure"
+            />
+            <button
+              type="button"
+              id="voice-search"
+              class="btn--voice"
+              aria-label="Activate voice search"
+            >
+              Voice Search
+            </button>
+          </div>
+
+          <label class="sr-only" for="filter-category">Location</label>
+          <select
+            id="filter-category"
+            aria-label="Select infrastructure category"
+          >
+            <option value="">Location</option>
+            <option value="food">5km</option>
+            <option value="health">10km</option>
+            <option value="transport">20km</option>
+          </select>
+
+          <label class="sr-only" for="filter-disability">Disability Type</label>
+          <select id="filter-disability" aria-label="Select disability type">
+            <option value="">Disability Type</option>
+            <option value="blind">Blind</option>
+            <option value="hearing">Hearing Impairment</option>
+            <option value="mobility">Mobility Impairment</option>
+            <option value="all">Prefer Not to Say</option>
+          </select>
+
+          <button
+            type="submit"
+            class="btn btn--primary"
+            id="btn-search"
+            aria-label="Search"
+          >
+            Search
+          </button>
+        </form>
+      </div>
+    </header>
+
+    <main class="container">
+      <section
+        id="results"
+        class="results"
+        role="region"
+        aria-label="Ranking results"
+      >
+        <!-- Card 1 -->
+        <article
+          class="card card--shop"
+          aria-labelledby="place-pho24"
+          data-blind="85"
+          data-hearing="90"
+          data-mobility="80"
+          data-service="80"
+          data-facility="70"
+        >
+          <div class="card__media">
+            <img src="public/a.jpg" alt="Front of A Cafe" />
+          </div>
+
+          <div class="card__body_out">
+            <div class="card__body">
+              <div class="text-card">
+                <h3 id="place-pho24">A Cafe</h3>
+                <div class="card__status" aria-label="Availability status">
+                  <span class="status-green status--open">Open Now</span>
+                </div>
+                <div class="card__description">
+                  <p>
+                    A Cafe offers a cozy atmosphere with a wide selection of
+                    coffee and pastries. Standout features for blind visitors
+                    include braille menus, tactile signage throughout the space,
+                    and staff trained in guiding techniques to ensure a smooth
+                    navigation experience.
+                  </p>
+                </div>
+              </div>
+              <div class="card__actions">
+                <button
+                  type="button"
+                  class="btn btn--primary"
+                  data-detail="pho24"
+                  aria-label="View details for A Cafe"
+                >
+                  View Details
+                </button>
+                <button
+                  type="button"
+                  class="btn btn--primary"
+                  data-review="A Cafe"
+                  aria-label="Submit review for A Cafe"
+                >
+                  Submit Review
+                </button>
+              </div>
+            </div>
+
+            <!-- keep the original three scores for screen readers / data source -->
+            <div class="card__a11y sr-only">
+              <span aria-label="Accessibility for blind 85 percent"></span>
+              <span
+                aria-label="Accessibility for hearing impairment 90 percent"
+              ></span>
+              <span
+                aria-label="Accessibility for mobility impairment 80 percent"
+              ></span>
+            </div>
+          </div>
+
+          <aside class="card__meta" aria-label="Ratings">
+            <div class="card_meta_mini">
+              <div class="rating__overall">Okay</div>
+              <div
+                class="rating__overall rating_color1"
+                role="img"
+                aria-label="Overall accessibility score out of 100"
+              >
+                <span class="rating__value js-overall">–</span>
+                <span class="rating__suffix">/100</span>
+              </div>
+            </div>
+            <p class="distance">2.4 km</p>
+          </aside>
+        </article>
+
+        <article
+          class="card card--shop"
+          aria-labelledby="place-pho24"
+          data-blind="65"
+          data-hearing="50"
+          data-mobility="80"
+          data-service="80"
+          data-facility="70"
+        >
+          <div class="card__media">
+            <img src="public/b.jpg" alt="Front of Phở 24 Restaurant" />
+          </div>
+
+          <div class="card__body_out">
+            <div class="card__body">
+              <div class="text-card">
+                <h3 id="place-pho24">Phở 24 Restaurant</h3>
+                <div class="card__status" aria-label="Availability status">
+                  <span class="status-red status--open">Closed</span>
+                </div>
+                <div class="card__description">
+                  <p>
+                    Phở 24 Restaurant is renowned for its authentic Vietnamese
+                    phở, served in a vibrant setting. Highlights include ample
+                    wheelchair-accessible parking, a spacious dining area, and a
+                    welcoming ambiance perfect for families and groups.
+                  </p>
+                </div>
+              </div>
+              <div class="card__actions">
+                <button
+                  type="button"
+                  class="btn btn--primary"
+                  data-detail="pho24"
+                  aria-label="View details for Phở 24 Restaurant"
+                >
+                  View Details
+                </button>
+                <button
+                  type="button"
+                  class="btn btn--primary"
+                  data-review="Phở 24 Restaurant"
+                  aria-label="Submit review for Phở 24 Restaurant"
+                >
+                  Submit Review
+                </button>
+              </div>
+            </div>
+
+            <!-- keep the original three scores for screen readers / data source -->
+            <div class="card__a11y sr-only">
+              <span aria-label="Accessibility for blind 65 percent"></span>
+              <span
+                aria-label="Accessibility for hearing impairment 50 percent"
+              ></span>
+              <span
+                aria-label="Accessibility for mobility impairment 80 percent"
+              ></span>
+            </div>
+          </div>
+
+          <aside class="card__meta" aria-label="Ratings">
+            <div class="card_meta_mini">
+              <div class="rating__overall">Recommended</div>
+              <div
+                class="rating__overall rating_color2"
+                role="img"
+                aria-label="Overall accessibility score out of 100"
+              >
+                <span class="rating__value js-overall">–</span>
+                <span class="rating__suffix">/100</span>
+              </div>
+            </div>
+            <p class="distance">3 km</p>
+          </aside>
+        </article>
+
+        <article
+          class="card card--shop"
+          aria-labelledby="place-alla-hotel"
+          data-blind="55"
+          data-hearing="10"
+          data-mobility="20"
+          data-service="80"
+          data-facility="70"
+        >
+          <div class="card__media">
+            <img src="public/c.jpg" alt="Interior of Alla Hotel" />
+          </div>
+
+          <div class="card__body_out">
+            <div class="card__body">
+              <div class="text-card">
+                <h3 id="place-alla-hotel">Alla Hotel</h3>
+                <div class="card__status" aria-label="Availability status">
+                  <span class="status-green status--open">Open Now</span>
+                </div>
+                <div class="card__description">
+                  <p>
+                    Alla Hotel provides a comfortable stay with modern
+                    amenities. For guests with hearing impairments, the hotel
+                    offers captioned televisions, and staff trained in basic
+                    sign language to assist with communication.
+                  </p>
+                </div>
+              </div>
+              <div class="card__actions">
+                <button
+                  type="button"
+                  class="btn btn--primary"
+                  data-detail="alla-hotel"
+                  aria-label="View details for Alla Hotel"
+                >
+                  View Details
+                </button>
+                <button
+                  type="button"
+                  class="btn btn--primary"
+                  data-review="Alla Hotel"
+                  aria-label="Submit review for Alla Hotel"
+                >
+                  Submit Review
+                </button>
+              </div>
+            </div>
+
+            <!-- keep the original three scores for screen readers / data source -->
+            <div class="card__a11y sr-only">
+              <span aria-label="Accessibility for blind 55 percent"></span>
+              <span
+                aria-label="Accessibility for hearing impairment 10 percent"
+              ></span>
+              <span
+                aria-label="Accessibility for mobility impairment 20 percent"
+              ></span>
+            </div>
+          </div>
+
+          <aside class="card__meta" aria-label="Ratings">
+            <div class="card_meta_mini">
+              <div class="rating__overall">Need Improvement</div>
+              <div
+                class="rating__overall rating_color3"
+                role="img"
+                aria-label="Overall accessibility score out of 100"
+              >
+                <span class="rating__value js-overall">–</span>
+                <span class="rating__suffix">/100</span>
+              </div>
+            </div>
+            <p class="distance">4.5 km</p>
+          </aside>
+        </article>
+        <div class="results__more">
+          <button
+            type="button"
+            id="btn-more"
+            class="btn btn--primary"
+            aria-label="Load more results"
+          >
+            View more
+          </button>
+        </div>
+      </section>
+    </main>
+
+    <!-- Live region (fixed) -->
+    <div id="sr-live" aria-live="polite" class="sr-only"></div>
+
+    <!-- Review Modal -->
+    <div
+      id="review-modal"
+      class="modal"
+      role="dialog"
+      aria-modal="true"
+      aria-hidden="true"
+      aria-labelledby="review-title"
+      aria-describedby="review-desc"
+    >
+      <div class="modal__panel" role="document">
+        <h2 id="review-title" class="modal__title">Submit Review</h2>
+        <p id="review-desc" class="helper">
+          Share your experience. Fields marked with * are required.
+        </p>
+        <form id="review-form" novalidate>
+          <div class="form-row">
+            <span class="helper" id="where-label">Location *</span>
+            <input
+              class="input"
+              id="where"
+              name="where"
+              type="text"
+              required
+              aria-required="true"
+              aria-labelledby="where-label"
+            />
+          </div>
+          <div class="form-row">
+            <span class="helper">Service *</span>
+            <div
+              class="radio-group"
+              role="radiogroup"
+              aria-label="Service level"
+            >
+              <label
+                ><input type="radio" name="service" value="poor" required />
+                Need Improvement</label
+              >
+              <label
+                ><input type="radio" name="service" value="ok" /> Okay</label
+              >
+              <label
+                ><input type="radio" name="service" value="good" />
+                Recommended</label
+              >
+            </div>
+          </div>
+          <div class="form-row">
+            <span class="helper">Facilities *</span>
+            <div
+              class="radio-group"
+              role="radiogroup"
+              aria-label="Facility level"
+            >
+              <label
+                ><input type="radio" name="facility" value="poor" required />
+                Need Improvement</label
+              >
+              <label
+                ><input type="radio" name="facility" value="ok" /> Okay</label
+              >
+              <label
+                ><input type="radio" name="facility" value="good" />
+                Recommended</label
+              >
+            </div>
+          </div>
+          <div class="form-row">
+            <label for="comment">Comment</label>
+            <div class="input-group">
+              <textarea
+                class="input textarea"
+                id="comment"
+                name="comment"
+                placeholder="Enter your comment"
+              ></textarea>
+              <button
+                type="button"
+                id="voice-comment"
+                class="btn--voice"
+                aria-label="Activate voice comment"
+              >
+                Voice Comment
+              </button>
+            </div>
+          </div>
+          <div class="form-row">
+            <label for="photo">Upload Photo (optional)</label>
+            <input
+              class="input"
+              id="photo"
+              name="photo"
+              type="file"
+              accept="image/*"
+            />
+            <label for="photo-alt">Photo Description *</label>
+            <input
+              class="input"
+              id="photo-alt"
+              name="photo-alt"
+              type="text"
+              placeholder="Describe the photo"
+              aria-describedby="alt-help"
+            />
+            <span id="alt-help" class="helper"
+              >Required if you upload a photo.</span
+            >
+          </div>
+          <div class="actions">
+            <button type="submit" class="btn btn--primary">Submit</button>
+            <button type="button" class="btn" data-close="review">Close</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <div
+      id="detail-modal"
+      class="modal"
+      role="dialog"
+      aria-modal="true"
+      aria-hidden="true"
+      aria-labelledby="detail-title"
+    >
+      <div class="modal__panel" role="document">
+        <h2 id="detail-title" class="modal__title">Location Details</h2>
+        <p id="detail-description"></p>
+        <h3>Accessibility by Disability</h3>
+        <div
+          id="detail-ratings"
+          class="ratings-grid"
+          aria-label="Accessibility ratings by disability"
+        ></div>
+        <h3>Special Services</h3>
+        <ul id="detail-services"></ul>
+        <h3>Customer Feedback (50)</h3>
+        <div id="feedback-container" class="feedback-container">
+          <ul id="feedback-list" class="feedback-list">
+            <li>
+              <strong>Anonymous (Service: Recommended, Facilities: Okay)</strong> "Good coffee, easy access"
+            </li>
+            <li>
+              <strong>Anonymous (Service: Okay, Facilities: Need Improvement)</strong> "Staff were helpful but parking was tight"
+            </li>
+            <li>
+              <strong>Anonymous (Service: Recommended, Facilities: Okay)</strong> "Nice ambiance, needs better signage"
+            </li>
+          </ul>
+          <div class="feedback-actions">
+            <button
+              type="button"
+              id="load-more-feedback"
+              class="btn btn--primary"
+              aria-label="Load more customer feedback"
+            >
+              Load More Feedback
+            </button>
+          </div>
+        </div>
+        <div class="actions">
+          <a
+            id="detail-map-link"
+            class="btn btn--primary"
+            href="#"
+            target="_blank"
+            rel="noopener"
+            aria-label="Get directions on Google Maps"
+            >Get Directions</a
+          >
+          <button type="button" class="btn" data-close="detail">Close</button>
+        </div>
+      </div>
+    </div>
+    <footer class="footer" aria-label="Website footer">
+      <div class="footer__content">
+        <div class="footer__section">
+          <h4 class="footer__title">About Us</h4>
+          <p>
+            Discover the best accessible shops and services near you. We are
+            committed to promoting inclusivity and providing reliable
+            accessibility information.
+          </p>
+        </div>
+        <div class="footer__section">
+          <h4 class="footer__title">Contact</h4>
+          <ul class="footer__links">
+            <li>
+              <a href="mailto:info@accessibleshops.com" aria-label="Email us"
+                >info@accessibleshops.com</a
+              >
+            </li>
+            <li>
+              <a href="tel:+1234567890" aria-label="Call us"
+                >+1 (234) 567-890</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="footer__section">
+          <h4 class="footer__title">Quick Links</h4>
+          <ul class="footer__links">
+            <li><a href="/about" aria-label="About page">About</a></li>
+            <li><a href="/contact" aria-label="Contact page">Contact</a></li>
+            <li>
+              <a href="/accessibility" aria-label="Accessibility information"
+                >Accessibility</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>&copy; 2025 Accessible Shops. All rights reserved.</p>
+      </div>
+    </footer>
+    <script>
+      // =============== Data mock ===============
+      const locationsData = {
+        pho24: {
+          title: "Phở 24 Restaurant",
+          description:
+            "Traditional phở restaurant chain. Fast service, modern ambiance, disability-friendly.",
+          services: [
+            "Sign language support",
+            "Guide dog area",
+            "Disability-friendly delivery",
+          ],
+          mapUrl:
+            "https://www.google.com/maps/dir/?api=1&destination=Ph%E1%BB%9F+24,+H%C3%A0+N%E1%BB%99i,+Vi%E1%BB%87t+Nam",
+        },
+        vietduc: {
+          title: "Việt Đức Hospital",
+          description:
+            "Leading surgical hospital with wide pathways, multi-floor elevators, serving large patient volumes.",
+          services: [
+            "Sign language interpreter",
+            "Wheelchairs at entrance",
+            "Priority for people with disabilities",
+          ],
+          mapUrl:
+            "https://www.google.com/maps/dir/?api=1&destination=B%E1%BB%87nh+vi%E1%BB%87n+Vi%E1%BB%87t+%C4%90%E1%BB%A9c,+H%C3%A0+N%E1%BB%99i,+Vi%E1%BB%87t+Nam",
+        },
+      };
+
+      // ==== Nav height → CSS var (so hero fills screen under nav)
+      const nav = document.querySelector('nav[role="navigation"]');
+      function updateNavHeight() {
+        const h = Math.ceil(nav.getBoundingClientRect().height);
+        document.documentElement.style.setProperty("--nav-h", h + "px");
+      }
+      window.addEventListener("load", updateNavHeight);
+      window.addEventListener("resize", updateNavHeight);
+      window.addEventListener("orientationchange", updateNavHeight);
+      new ResizeObserver(updateNavHeight).observe(nav);
+
+      // Live region
+      const live = document.getElementById("sr-live");
+      const announce = (msg) => {
+        live.textContent = msg;
+      };
+
+      // High Contrast
+      const contrastBtn = document.getElementById("btn-contrast");
+      contrastBtn.addEventListener("click", () => {
+        const root = document.documentElement;
+        const isContrast = root.getAttribute("data-theme") === "contrast";
+        root.setAttribute("data-theme", isContrast ? "light" : "contrast");
+        contrastBtn.setAttribute("aria-pressed", String(!isContrast));
+        announce(
+          isContrast
+            ? "High contrast mode disabled"
+            : "High contrast mode enabled"
+        );
+      });
+
+      // Read page
+      document.getElementById("btn-read").addEventListener("click", () => {
+        const content = document.querySelector("main").innerText;
+        const utterance = new SpeechSynthesisUtterance(content);
+        utterance.lang = "en-US";
+        window.speechSynthesis.speak(utterance);
+        announce("Reading page content");
+      });
+
+      // Mobile nav toggle
+      const navToggle = document.querySelector(".nav__toggle");
+      const navList = document.getElementById("nav-list");
+      navToggle.addEventListener("click", () => {
+        const isOpen = navList.classList.toggle("nav__list--open");
+        navToggle.setAttribute("aria-expanded", String(isOpen));
+        announce(isOpen ? "Menu opened" : "Menu closed");
+      });
+
+      // ===== Search form (guard if not present) =====
+      const heroForm = document.getElementById("hero-search");
+      if (heroForm) {
+        heroForm.addEventListener("submit", (e) => {
+          e.preventDefault();
+          const q = document.getElementById("search-input").value.trim();
+          const cat = document.getElementById("filter-category").value;
+          const dis = document.getElementById("filter-disability").value;
+          announce(
+            `Searching for: "${q}" • Category: ${cat || "any"} • Disability: ${
+              dis || "any"
+            }`
+          );
+        });
+      }
+
+      // Voice Recognition Setup
+      const recognition = new (window.SpeechRecognition || window.webkitSpeechRecognition)();
+      recognition.continuous = false;
+      recognition.interimResults = false;
+      recognition.lang = "en-US";
+
+      recognition.onresult = (event) => {
+        const transcript = event.results[0][0].transcript;
+        const activeElement = document.activeElement;
+        if (activeElement.id === "search-input") {
+          document.getElementById("search-input").value = transcript;
+          announce(`Search input set to: ${transcript}`);
+        } else if (activeElement.id === "comment") {
+          document.getElementById("comment").value = transcript;
+          announce(`Comment set to: ${transcript}`);
+        }
+        recognition.stop();
+      };
+
+      recognition.onerror = (event) => {
+        announce(`Voice recognition error: ${event.error}`);
+        recognition.stop();
+      };
+
+      // Voice Search Button
+      document.getElementById("voice-search").addEventListener("click", () => {
+        recognition.start();
+        announce("Voice search activated. Please speak now.");
+      });
+
+      // Voice Comment Button
+      document.getElementById("voice-comment").addEventListener("click", () => {
+        recognition.start();
+        announce("Voice comment activated. Please speak now.");
+      });
+
+      // ===== Modals (focus trap + ESC) =====
+      function trapFocus(modal) {
+        const focusable = modal.querySelectorAll(
+          'a[href], button:not([disabled]), textarea, input, select, [tabindex]:not([tabindex="-1"])'
+        );
+        const first = focusable[0];
+        const last = focusable[focusable.length - 1];
+        function handler(e) {
+          if (e.key === "Tab") {
+            if (e.shiftKey && document.activeElement === first) {
+              e.preventDefault();
+              last.focus();
+            } else if (!e.shiftKey && document.activeElement === last) {
+              e.preventDefault();
+              first.focus();
+            }
+          }
+          if (e.key === "Escape") {
+            if (modal.id === "detail-modal") closeDetailModal();
+            if (modal.id === "review-modal") closeReviewModal();
+          }
+        }
+        modal.addEventListener("keydown", handler);
+        return () => modal.removeEventListener("keydown", handler);
+      }
+
+      // Review Modal
+      const reviewModal = document.getElementById("review-modal");
+      let untrapReview = null;
+      function openReviewModal(place) {
+        reviewModal.setAttribute("aria-hidden", "false");
+        const where = document.getElementById("where");
+        where.value = place || "";
+        reviewModal.style.display = "grid";
+        document.body.style.overflow = "hidden";
+        untrapReview = trapFocus(reviewModal);
+        document.getElementById("review-title").focus({ preventScroll: true });
+        announce(`Opened review form for ${place}`);
+      }
+      function closeReviewModal() {
+        reviewModal.setAttribute("aria-hidden", "true");
+        reviewModal.style.display = "none";
+        document.body.style.overflow = "";
+        if (untrapReview) untrapReview();
+        announce("Closed review form");
+      }
+      document
+        .querySelector('[data-close="review"]')
+        .addEventListener("click", closeReviewModal);
+
+      // Detail Modal
+      const detailModal = document.getElementById("detail-modal");
+      let untrapDetail = null;
+
+      // Build/ensure the ratings container exists in the modal
+      function ensureDetailRatingsContainer() {
+        let container = document.getElementById("detail-ratings");
+        if (!container) {
+          const desc = document.getElementById("detail-description");
+          const heading = document.createElement("h3");
+          heading.textContent = "Accessibility by Disability";
+          container = document.createElement("div");
+          container.id = "detail-ratings";
+          container.className = "ratings-grid";
+          // insert after description
+          desc.insertAdjacentElement("afterend", container);
+          container.insertAdjacentElement("beforebegin", heading);
+        }
+        return container;
+      }
+
+      function openDetailModal(
+        key,
+        ratings = { blind: 0, hearing: 0, mobility: 0 }
+      ) {
+        const data = locationsData[key];
+        if (!data) return;
+
+        // Title/desc/services
+        document.getElementById("detail-title").textContent = data.title;
+        document.getElementById("detail-description").textContent =
+          data.description;
+
+        const ul = document.getElementById("detail-services");
+        ul.innerHTML = "";
+        data.services.forEach((s) => {
+          const li = document.createElement("li");
+          li.textContent = s;
+          ul.appendChild(li);
+        });
+        document.getElementById("detail-map-link").href = data.mapUrl;
+
+        // Disability ratings
+        const container = ensureDetailRatingsContainer();
+        const row = (label, value) => {
+          const v = Math.max(0, Math.min(100, Number(value) || 0));
+          return `
+        <div class="rating-line" role="group" aria-label="${label} ${v}%">
+          <span class="rating-label">${label}</span>
+          <span class="progress" role="progressbar"
+                aria-valuemin="0" aria-valuemax="100" aria-valuenow="${v}"
+                aria-label="${v}% accessibility for ${label.toLowerCase()}">
+            <span class="progress__bar" style="width:${v}%"></span>
+          </span>
+          <span class="rating-num">${v}</span>
+        </div>`;
+        };
+        container.innerHTML =
+          row("Blind", ratings.blind) +
+          row("Hearing", ratings.hearing) +
+          row("Mobility", ratings.mobility);
+
+        // Open modal
+        detailModal.setAttribute("aria-hidden", "false");
+        detailModal.style.display = "grid";
+        document.body.style.overflow = "hidden";
+        untrapDetail = trapFocus(detailModal);
+        document.getElementById("detail-title").focus({ preventScroll: true });
+        announce(`Opened details for ${data.title}`);
+      }
+      function closeDetailModal() {
+        detailModal.setAttribute("aria-hidden", "true");
+        detailModal.style.display = "none";
+        document.body.style.overflow = "";
+        if (untrapDetail) untrapDetail();
+        announce("Closed details page");
+      }
+      document
+        .querySelector('[data-close="detail"]')
+        .addEventListener("click", closeDetailModal);
+
+      // Open handlers (delegated) — now passes disability ratings from the card
+      document.addEventListener("click", (e) => {
+        const btnDetail = e.target.closest("[data-detail]");
+        const btnReview = e.target.closest("[data-review]");
+        if (btnDetail) {
+          const key = btnDetail.getAttribute("data-detail");
+          const card = btnDetail.closest(".card");
+          const ratings = {
+            blind: Number(card?.dataset.blind || 0),
+            hearing: Number(card?.dataset.hearing || 0),
+            mobility: Number(card?.dataset.mobility || 0),
+          };
+          openDetailModal(key, ratings);
+        }
+        if (btnReview) {
+          openReviewModal(btnReview.getAttribute("data-review"));
+        }
+      });
+
+      // Backdrop click to close
+      document.querySelectorAll(".modal").forEach((modal) => {
+        modal.addEventListener("click", (e) => {
+          if (e.target === modal) {
+            if (modal.id === "detail-modal") closeDetailModal();
+            if (modal.id === "review-modal") closeReviewModal();
+          }
+        });
+      });
+
+      // Hydrate summary numbers on cards (overall/service/facility)
+      function hydrateCards() {
+        document.querySelectorAll(".card--shop").forEach((card) => {
+          const b = +card.dataset.blind || 0;
+          const h = +card.dataset.hearing || 0;
+          const m = +card.dataset.mobility || 0;
+          const s = +card.dataset.service || 0;
+          const f = +card.dataset.facility || 0;
+
+          const overall = Math.round((b + h + m) / 3);
+          const outOverall = card.querySelector(".js-overall");
+          const outService = card.querySelector(".js-service");
+          const outFacility = card.querySelector(".js-facility");
+
+          if (outOverall) {
+            outOverall.textContent = overall;
+            outOverall.parentElement.setAttribute(
+              "aria-label",
+              `Overall accessibility ${overall} out of 100`
+            );
+          }
+          if (outService) outService.textContent = s + "%";
+          if (outFacility) outFacility.textContent = f + "%";
+        });
+      }
+
+      // Run after DOM is ready
+      document.readyState === "loading"
+        ? document.addEventListener("DOMContentLoaded", hydrateCards)
+        : hydrateCards();
+
+      // Photo upload toggle
+      const photoInput = document.getElementById("photo");
+      const photoSection = document.querySelectorAll("#photo-upload-section")[0];
+      photoInput.addEventListener("change", () => {
+        photoSection.style.display = photoInput.files.length > 0 ? "block" : "none";
+      });
+
+      // Form submission (mock)
+      document.getElementById("review-form").addEventListener("submit", (e) => {
+        e.preventDefault();
+        const formData = new FormData(e.target);
+        const location = formData.get("where");
+        const service = formData.get("service");
+        const facility = formData.get("facility");
+        const comment = formData.get("comment") || "No additional feedback";
+        const photoAlt = formData.get("photo-alt");
+
+        if ((photoInput.files.length > 0 && !photoAlt) || !location || !service || !facility) {
+          announce("Please fill all required fields.");
+          return;
+        }
+
+        announce(`Review submitted for ${location}. Thank you!`);
+        closeReviewModal();
+      });
+    </script>
+  </body>
+</html>
